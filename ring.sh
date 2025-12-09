@@ -1,65 +1,7 @@
 #!/bin/bash
+  
 
-function install_oh_my_zsh() {
-    sudo apt update -y
-    sudo apt install zsh -y
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-    sudo apt install fonts-powerline -y
-}
 
-function install_terminator() {
-    sudo apt install terminator -y
-}
-
-function install_vscode() {
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install software-properties-common apt-transport-https wget -y
-    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
-    sudo apt install code -y
-}
-
-function install_docker() {
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    sudo sh get-docker.sh
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-    newgrp docker
-}
-
-function install_docker_compose() {
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-}
-
-function install_snap() {
-  sudo apt update
-  sudo apt install snapd -y
-}
-
-function install_postman() {
-  sudo snap install postman -y
-}
-
-function install_telegram() {
-  sudo snap install telegram-desktop -y
-}
-
-function install_vlc() {
-  sudo snap install vlc -y
-}
-
-function install_spotify() {
-  sudo snap install spotify -y
-}
-
-function install_brave() {
-  sudo apt install apt-transport-https curl -y
-  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-  sudo apt update
-  sudo apt install brave-browser -y
-}
 
 function get_IDE_datagrip() {
     if [ ! -d "${HOME}/.jetbrains" ]; then
