@@ -1,2 +1,18 @@
 install:
-	- 
+	- sh ./snap.sh     
+	- sh ./oh_my_zsh.sh  
+	- sh ./brave.sh     
+	- sh ./docker_compose.sh
+	- sh ./goland.sh  
+	- sh ./postman.sh            
+	- sh ./pycharm.sh  
+	- sh ./telegram.sh     
+	- sh ./vlc.sh
+	- sh ./datagrip.sh  
+	- sh ./docker.sh             
+	- sh ./phpstorm.sh   
+	- sh ./prepare_jetbrains.sh  
+	- sh ./spotify.sh  
+	- sh ./terminaltor.sh  
+	- sh ./vscode.sh
+	
